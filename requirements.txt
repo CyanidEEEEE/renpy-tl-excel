@@ -1,0 +1,24 @@
+# requirements.txt
+
+# Core Dependencies (Required for all functionalities)
+openpyxl>=3.1.2,<3.2  # For Excel file reading and writing.  Pinned to major.minor version.
+pandas>=2.0.3,<2.1    # For data manipulation (used in apply_translations).  Pinned.
+tqdm>=4.66.1,<4.67   # For progress bars.  Pinned.
+
+# Optional, but HIGHLY Recommended Dependencies
+lxml>=5.1.0,<5.2      # openpyxl can use lxml for faster XML processing (large files). Pinned.
+
+# Implicit Dependencies (often handled automatically, but good to list)
+et_xmlfile>=1.1.0,<1.2 # Dependency of openpyxl.
+numpy>=1.24.0,<1.27   # Dependency of pandas.  Broad version range for compatibility.
+
+# --- Development Dependencies (OPTIONAL - see notes below) ---
+# These are NOT included in the main requirements.txt.
+# They should go in a separate file (e.g., dev-requirements.txt)
+# or be managed by a tool like Poetry or Pipenv.
+
+# pytest>=7.0.0     # For unit testing
+# mypy>=1.0.0       # For static type checking
+# flake8>=6.0.0      # For code style checking (PEP 8)
+# black>=23.0.0     # For automatic code formatting
+# pre-commit        # For running checks before commits
